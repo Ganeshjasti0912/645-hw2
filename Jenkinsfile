@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Ganeshjasti0912/645-hw2.git'
+                git branch: 'main', url: 'https://github.com/Ganeshjasti0912/645-hw2.git'
             }
         }
 
@@ -23,13 +23,7 @@ pipeline {
 
         stage('Push to Docker Hub') {
             steps {
-                withCredentials([
-                    usernamePassword(
-                        credentialsId: 'c1d9192e-d276-4541-8fab-ece2f3ec681d',  // your Jenkins Docker creds ID
-                        usernameVariable: 'DOCKER_USER',
-                        passwordVariable: 'DOCKER_PASS'
-                    )
-                ]) {
+                withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                     script {
                         sh '''
                         echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
