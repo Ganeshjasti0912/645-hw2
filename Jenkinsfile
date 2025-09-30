@@ -38,7 +38,7 @@ pipeline {
             steps {
                 script {
                     sh 'kubectl apply -f hw1-deployment.yaml --validate=false --insecure-skip-tls-verify=true'
-                    sh 'kubectl apply -f hw1-service.yaml'
+                    sh 'kubectl apply -f hw1-service.yaml --validate=false --insecure-skip-tls-verify=true'
                 }
             }
         }
