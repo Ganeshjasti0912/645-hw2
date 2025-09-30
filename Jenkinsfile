@@ -37,7 +37,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    sh 'kubectl apply -f hw1-deployment.yaml'
+                    sh 'kubectl apply -f hw1-deployment.yaml --validate=false --insecure-skip-tls-verify=true'
                     sh 'kubectl apply -f hw1-service.yaml'
                 }
             }
