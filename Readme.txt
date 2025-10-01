@@ -24,6 +24,8 @@ Step 1: Setting Up an S3 Bucket for Static Website Hosting
 
 URL of S3 bucket website endpoint: https://ganesh-645-hw1.s3.us-east-1.amazonaws.com/index.html
 
+
+
 Step 2: Setting Up an EC2 Instance
 
 1.	Navigate to EC2 and click Launch Instance.
