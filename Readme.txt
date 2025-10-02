@@ -61,6 +61,6 @@ Step 3: Deploying the Website on EC2
 
 ip address of Ec2 instance: 35.175.247.35
 
-# this is to make the update in our project commit
+# this is to uodate my commit action inside the gthub which shoud bge re
 
 "Webhook test" 
