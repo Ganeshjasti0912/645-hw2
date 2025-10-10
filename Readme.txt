@@ -40,6 +40,7 @@ Step 2: Setting Up an EC2 Instance
 Step 3: Deploying the Website on EC2
 
 
+
 1.	Update system packages:
 2.	sudo yum update -y  # For Amazon Linux
         sudo apt update -y  # For Ubuntu
